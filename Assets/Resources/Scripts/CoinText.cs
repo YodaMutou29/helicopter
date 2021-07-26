@@ -8,6 +8,8 @@ public class CoinText : MonoBehaviour {
 	public GameObject helicopter;
 	private Text text;
 	private int coins;
+	private int gems;
+	private int points;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,9 @@ public class CoinText : MonoBehaviour {
 	void Update () {
 		if (helicopter != null) {
 			coins = helicopter.GetComponent<HeliController>().coinTotal;
+			gems = helicopter.GetComponent<HeliController>().gemTotal;
 		}
-		text.text = "Coins: " + coins;
+		points = (gems * 5) + coins;
+		text.text = "Score: " + points;
 	}
 }

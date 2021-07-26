@@ -27,6 +27,7 @@ public class SkyscraperSpawner : MonoBehaviour {
 
 			// randomly increase the speed by 1
 			if (Random.Range(1, 4) == 1) {
+				Debug.Log("Speed: " + speed);
 				speed += 1f;
 			}
 
